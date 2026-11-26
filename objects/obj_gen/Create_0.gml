@@ -80,6 +80,7 @@ ores = function(_xx,_yy,_ore,_noise_id,_fraq,_veio_min,_veio_max){
             
             if(_grid == 0){
                 instance_create_layer(_pos_x*cell,_pos_y*cell,layer,_ore);
+                grid[# _pos_x,_pos_y] = 2
                 var _dis_x = choose(-1,1,0);
                 var _dis_y = choose(-1,1,0);
                 _pos_x += _dis_x;
