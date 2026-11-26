@@ -12,7 +12,7 @@ for(var _i = 0; _i < cell_w; _i++){
             } else {
             	var _grid_type = 0;
                 var _noise = irandom_range(0,100);
-                if(_noise < 34){
+                if(_noise < 42){
                     _grid_type = 1;
                 } else {
                     _grid_type = 0;
@@ -59,5 +59,40 @@ for(var _i = 0; _i < 5; _i++){
 for(var _i = 0; _i < cell_w; _i++){
     for(var _j = 0; _j < cell_h; _j++){
         if(grid[# _i,_j] == 1) instance_create_layer(_i*cell,_j*cell,layer,obj_collision);
+    }
+}
+
+ores = function(_xx,_yy,_noise_id,_fraq,_veio_min,_veio_max){
+    
+    if(_noise_id > _fraq){
+        var _pos_x = _xx;
+        var _pos_y = _yy;
+        var _veio = irandom_range(_veio_min,_veio_max);
+
+        repeat (_veio) {
+            
+            if (_pos_x < 0 || _pos_x >= cell_w || _pos_y < 0 || _pos_y >= cell_h) {
+                break;
+            }
+            
+            var _grid = grid[# _pos_x,_pos_y];
+            
+            if(_grid == 0){
+                instance_create_layer(_pos_x*cell,_pos_y*cell,layer,obj_ore);
+                var _dis_x = choose(-1,1,0);
+                var _dis_y = choose(-1,1,0);
+                _pos_x += _dis_x;
+                _pos_y += _dis_y;
+            } else {
+                break;
+            }
+            
+        }
+    }
+}
+
+for(var _i = 0; _i < cell_w; _i++){
+    for(var _j = 0; _j < cell_h; _j++){
+        ores(_i,_j,random(1),0.99,4,6);
     }
 }
