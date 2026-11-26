@@ -37,9 +37,13 @@
   "resources":[
     {"id":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},},
     {"id":{"name":"obj_gen","path":"objects/obj_gen/obj_gen.yy",},},
+    {"id":{"name":"obj_gould","path":"objects/obj_gould/obj_gould.yy",},},
+    {"id":{"name":"obj_iron","path":"objects/obj_iron/obj_iron.yy",},},
     {"id":{"name":"obj_ore","path":"objects/obj_ore/obj_ore.yy",},},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},},
+    {"id":{"name":"spr_gould","path":"sprites/spr_gould/spr_gould.yy",},},
+    {"id":{"name":"spr_iron","path":"sprites/spr_iron/spr_iron.yy",},},
     {"id":{"name":"spr_ore","path":"sprites/spr_ore/spr_ore.yy",},},
   ],
   "resourceType":"GMProject",
