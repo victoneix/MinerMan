@@ -62,6 +62,7 @@ for(var _i = 0; _i < cell_w; _i++){
     }
 }
 
+
 ores = function(_xx,_yy,_ore,_noise_id,_fraq,_veio_min,_veio_max){
     
     if(_noise_id > _fraq){
@@ -96,5 +97,9 @@ for(var _i = 0; _i < cell_w; _i++){
         ores(_i,_j,obj_ore,random(1),0.97,4,6);
         ores(_i,_j,obj_iron,random(1),0.98,3,5);
         ores(_i,_j,obj_gould,random(1),0.99,3,5);
+        //if(!instance_exists(obj_player) && grid[# _i,_j] == 0){
+            //instance_create_layer(x*cell,y*cell,layer,obj_player);
+        //}
     }
 }
+
