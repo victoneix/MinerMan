@@ -95,7 +95,7 @@ ores = function(_xx,_yy,_ore,_noise_id,_fraq,_veio_min,_veio_max){
 
 for(var _i = 0; _i < cell_w; _i++){
     for(var _j = 0; _j < cell_h; _j++){
-        ores(_i,_j,obj_ore,random(1),0.97,4,6);
+        ores(_i,_j,obj_coal,random(1),0.97,4,6);
         ores(_i,_j,obj_iron,random(1),0.98,3,5);
         ores(_i,_j,obj_gould,random(1),0.99,3,5);
         //if(!instance_exists(obj_player) && grid[# _i,_j] == 0){
@@ -103,4 +103,3 @@ for(var _i = 0; _i < cell_w; _i++){
         //}
     }
 }
-
