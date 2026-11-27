@@ -57,6 +57,8 @@
     {"id":{"name":"spr_iron","path":"sprites/spr_iron/spr_iron.yy",},},
     {"id":{"name":"spr_ore","path":"sprites/spr_ore/spr_ore.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
+    {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},},
+    {"id":{"name":"rls_wall","path":"tilesets/rls_wall/rls_wall.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

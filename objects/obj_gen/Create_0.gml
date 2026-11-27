@@ -1,3 +1,9 @@
+north = 1;
+west = 2;
+east = 4;
+south = 8;
+var _tile_id = layer_tilemap_get_id("Wall");
+
 cell = 16;
 cell_w = room_width div cell;
 cell_h = room_height div cell;
@@ -80,7 +86,7 @@ ores = function(_xx,_yy,_ore,_noise_id,_fraq,_veio_min,_veio_max){
             
             if(_grid == 0){
                 instance_create_layer(_pos_x*cell,_pos_y*cell,layer,_ore);
-                grid[# _pos_x,_pos_y] = 2
+                //grid[# _pos_x,_pos_y] = 2
                 var _dis_x = choose(-1,1,0);
                 var _dis_y = choose(-1,1,0);
                 _pos_x += _dis_x;
@@ -101,5 +107,18 @@ for(var _i = 0; _i < cell_w; _i++){
         //if(!instance_exists(obj_player) && grid[# _i,_j] == 0){
             //instance_create_layer(x*cell,y*cell,layer,obj_player);
         //}
+    }
+}
+
+for(var _i = 0; _i < cell_w; _i++){
+    for(var _j = 0; _j < cell_h; _j++){
+        if(grid[# _i,_j] != 0){
+            var _n_tile = grid[# _i,_j-1] = 1;
+            var _w_tile = grid[# _i-1,_j] = 1;
+            var _e_tile = grid[# _i+1,_j] = 1;
+            var _s_tile = grid[# _i,_j+1] = 1;
+            var _index = _n_tile*north+_w_tile*west+_e_tile*east+_s_tile*south+1;
+            tilemap_set(_tile_id,_index,_i,_j);
+        }
     }
 }
