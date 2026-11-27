@@ -1,6 +1,6 @@
-z = 4;
-zgrav = -0.4;
+z = 3;
+zgra = -0.3;
 zspd = 2;
 direction = irandom(359);
-speed = irandom_range(1,2);
-friction = 0.12;
+speed = random_range(1.3,2.2);
+friction = 0.15;
